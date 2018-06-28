@@ -1,21 +1,19 @@
-#simulate representative datasets for posterior generation
-#the expectations are just calculations
-#this just simulates trees under the expected values as starting points for
-#creating a meaningless alignment to load into BEAUti.  BEAUti requires a NEXUS file
-#with a fixed number of sequences, even though I will ultimately just sample from the
-#prior to generate trees (i.e. sample without considering the data; the data is listed
-#as 'NNN' for each individual in the data block of the XML file.
+# simulate representative datasets for posterior generation
+# the expectations are just calculations
+# this just simulates trees under the expected values as starting points for
+# creating a meaningless alignment to load into BEAUti.  BEAUti requires a NEXUS file
+# with a fixed number of sequences, even though I will ultimately just sample from the
+# prior to generate trees (i.e. sample without considering the data; the data is listed
+# as 'NNN' for each individual in the data block of the XML file.
 
-#set working directory
-#example:
-#setwd("~/Desktop/Final Simulation Study/fixed_root_simulations/")
+# set working directory
+setwd("/your/path/here")
 
-rm(list=ls())
 require(ape)
 require(geiger)
 require(TreeSim)
 
-#exponential expectation
+# exponential expectation
 (log(25)-log(2))/5 # 0.5051457
 2*((log(25)-log(2))/5) # 1.010291
 
